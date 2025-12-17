@@ -1,4 +1,4 @@
-import Header from '../../components/Header'; // 'e'를 지우고 경로를 확인하세요.
+import Header from '../../components/header';
 
 export default function About() {
   return (
