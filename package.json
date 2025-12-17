@@ -1,8 +1,7 @@
 {
   "name": "xpaiofinal",
   "version": "1.0.0",
-  "description": "XPAIO Homepage with Next.js",
-  "main": "index.js",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "next dev",
@@ -10,9 +9,6 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "next": "^16.0.10",
     "react": "^19.2.3",
@@ -26,13 +22,5 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/m1276150/xpaio-homepage.git"
-  },
-  "bugs": {
-    "url": "https://github.com/m1276150/xpaio-homepage/issues"
-  },
-  "homepage": "https://github.com/m1276150/xpaio-homepage#readme"
+  }
 }
