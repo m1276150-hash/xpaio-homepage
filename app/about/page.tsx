@@ -1,9 +1,9 @@
-eimport Header from '../../components/Header';
+import Header from '../../components/Header'; // 'e'를 지우고 경로를 확인하세요.
 
 export default function About() {
   return (
     <div className="min-h-screen bg-background text-textPrimary flex flex-col font-sans">
-      {/* 상단 헤더 (메인 페이지와 동일하게 유지) */}
+      {/* 상단 헤더 */}
       <Header />
 
       <main className="flex-1 p-8 md:p-20">
@@ -39,30 +39,16 @@ export default function About() {
           </div>
         </section>
 
-        {/* 핵심 가치 섹션 */}
-        <section className="mb-20 max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-neonBlue border-l-4 border-neonBlue pl-4">핵심 가치</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-neonBlue p-8 rounded-2xl text-background font-black text-center shadow-lg transform hover:-translate-y-2 transition-all duration-300">
-              혁신: 새로운 시대의 기준
-            </div>
-            <div className="bg-neonPurple p-8 rounded-2xl text-white font-black text-center shadow-lg transform hover:-translate-y-2 transition-all duration-300">
-              연대: 파이와의 파트너십
-            </div>
-            <div className="bg-neonYellow p-8 rounded-2xl text-background font-black text-center shadow-lg transform hover:-translate-y-2 transition-all duration-300">
-              무한함: 한계 없는 확장
-            </div>
-          </div>
-        </section>
-
         {/* 하단 버튼 */}
         <section className="text-center">
-          <button className="bg-white text-background px-10 py-4 rounded-full font-bold text-lg hover:bg-neonBlue hover:scale-105 transition-all duration-300 shadow-xl">
+          <button 
+            onClick={() => window.location.href = '/'}
+            className="bg-white text-background px-10 py-4 rounded-full font-bold text-lg hover:bg-neonBlue hover:scale-105 transition-all duration-300 shadow-xl"
+          >
             메인으로 돌아가기
           </button>
         </section>
       </main>
     </div>
   );
-}
 }

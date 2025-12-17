@@ -1,26 +1,24 @@
-import Header from '../components/Header';
-
-export default function Home() {
-  return (
-    <div className="min-h-screen bg-background text-textPrimary flex flex-col">
-      {/* 상단 헤더 */}
-      <Header />
-
-      {/* 메인 섹션 */}
-      <main className="flex flex-col flex-1 items-center justify-center text-center px-4">
-        <h2 className="text-5xl font-extrabold text-neonBlue drop-shadow-lg">
-          네온 우주로의 런치 🚀
-        </h2>
-        <p className="mt-4 text-xl">
-          비전과 기술이 만나는 프레임워크
-        </p>
-        <button
-          className="mt-8 px-6 py-3 border-2 border-neonBlue rounded-md 
-                     hover:bg-neonBlue hover:text-background transition-colors shadow-lg"
-        >
-          시작하기
-        </button>
-      </main>
-    </div>
-  );
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        background: "#0D1B2A",     // 딥 네이비 배경
+        textPrimary: "#FFFFFF",   // 기본 텍스트 색상
+        neonBlue: "#4ECDC4",      // 청록빛 네온 블루
+        neonPurple: "#9B5DE5",    // 보라빛 네온 퍼플
+        neonYellow: "#FFD93D",    // 밝은 네온 옐로우
+      },
+      // 네온 효과를 위한 그림자 추가
+      dropShadow: {
+        'neon': '0 0 10px rgba(78, 205, 196, 0.5)',
+      }
+    },
+  },
+  plugins: [],
 }
