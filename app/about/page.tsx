@@ -1,53 +1,32 @@
-import Header from '../../components/header';
+"use client"; // [해결] 프리렌더링 중 이벤트 핸들러(onClick 등) 전달 오류를 방지합니다.
 
-export default function About() {
+import React from "react";
+// 파일명을 'Header.tsx'로 수정하셨으므로 대문자로 불러옵니다.
+import Header from "../../components/Header"; 
+// 파일명을 'Aboutinteractivesection.tsx'로 수정하셨으므로 해당 경로를 따릅니다.
+import { AboutInteractiveSection } from "../../components/about/Aboutinteractivesection";
+
+export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-background text-textPrimary flex flex-col font-sans">
-      {/* 상단 헤더 */}
+    <div className="min-h-screen bg-white text-slate-900 flex flex-col font-sans">
+      {/* 상단 헤더: 대문자 Header 컴포넌트 호출 */}
       <Header />
 
-      <main className="flex-1 p-8 md:p-20">
-        {/* 헤더 섹션 */}
-        <section className="text-center mb-20">
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 drop-shadow-neon">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-neonBlue to-neonPurple">
-              Xpaio 소개
-            </span>
+      <main className="flex-1 p-8 md:p-20 pt-32 max-w-7xl mx-auto w-full">
+        {/* 정적 섹션: 은하수님이 이끄는 비전 문구 */}
+        <section className="text-center mb-24">
+          <h1 className="text-6xl md:text-9xl font-black mb-12 text-slate-900 tracking-tighter">
+            Xpaio 로드맵
           </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            단순한 플랫폼을 넘어, 설계자의 창의적 열정이 깃든 <br className="hidden md:block" />
-            무한한 확장의 공간입니다.
+          <p className="text-2xl md:text-4xl text-[#45B7AF] font-bold mb-8 italic">
+            "은하수가 이끄는 새로운 비전"
           </p>
         </section>
 
-        {/* 비전 섹션 */}
-        <section className="mb-20 max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-neonYellow border-l-4 border-neonYellow pl-4">비전</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-neonBlue transition-colors">
-              <h3 className="text-xl font-bold text-neonBlue mb-2">열정</h3>
-              <p className="text-gray-400">창의적 설계자의 뜨거운 열정을 담습니다.</p>
-            </div>
-            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-neonPurple transition-colors">
-              <h3 className="text-xl font-bold text-neonPurple mb-2">확장</h3>
-              <p className="text-gray-400">한계가 없는 무한한 확장성을 지향합니다.</p>
-            </div>
-            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-neonYellow transition-colors">
-              <h3 className="text-xl font-bold text-neonYellow mb-2">시너지</h3>
-              <p className="text-gray-400">사용자와 플랫폼이 함께 성장합니다.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* 하단 버튼 */}
-        <section className="text-center">
-          <button 
-            onClick={() => window.location.href = '/'}
-            className="bg-white text-background px-10 py-4 rounded-full font-bold text-lg hover:bg-neonBlue hover:scale-105 transition-all duration-300 shadow-xl"
-          >
-            메인으로 돌아가기
-          </button>
-        </section>
+        {/* 인터랙티브 섹션: 빌드 에러의 원인이었던 이벤트 핸들러가 포함된 영역 */}
+        <div className="text-center pb-32">
+          <AboutInteractiveSection />
+        </div>
       </main>
     </div>
   );

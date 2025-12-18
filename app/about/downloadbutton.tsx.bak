@@ -1,0 +1,13 @@
+import { DownloadButton } from "./DownloadButton";
+
+export default function AboutPage() {
+  return (
+    <div className="p-8 text-textPrimary bg-background min-h-screen">
+      <h1 className="text-4xl font-bold mb-4">About Page</h1>
+      <p className="mb-6">
+        이 페이지는 Next.js + Tailwind 테스트용입니다.
+      </p>
+      <DownloadButton />
+    </div>
+  );
+}
