@@ -1,8 +1,6 @@
 [build]
-  base = "."
-  publish = "."
-  command = ""
+  command = "npm run build"
+  publish = ".next"
 
-# Next.js 플러그인 제거됨
-# [[plugins]]
-# package = "@netlify/plugin-nextjs"
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
