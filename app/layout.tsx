@@ -1,13 +1,7 @@
-import './globals.css'; // 파일명이 globals.css라면 이렇게, clobasals.css라면 그 이름대로 적어야 합니다.
+import './globals.css';
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="ko">
-      <body>{children}</body>
-    </html>
-  );
-}
 export const metadata = {
+  metadataBase: new URL("https://xpaio-homepage.netlify.app"),
   title: "XPAIO | Web3 프로젝트",
   description: "XPAIO는 Web3 기반의 혁신적인 프로젝트입니다.",
   keywords: ["XPAIO", "Web3", "블록체인", "토큰", "로드맵"],
@@ -28,3 +22,11 @@ export const metadata = {
     type: "website",
   },
 };
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="ko">
+      <body>{children}</body>
+    </html>
+  );
+}

@@ -1,6 +1,3 @@
-[build]
-  command = "npm run build"
-  publish = ".next"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+git add netlify.toml
+git commit -m "Netlify TOML 최소 설정 적용"
+git push
