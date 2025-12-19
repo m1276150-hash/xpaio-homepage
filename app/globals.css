@@ -100,3 +100,40 @@ body {
   transform: scale(1.05);
   background: #fff;
 }
+/* Hero 섹션 전용 스타일 */
+#hero.section {
+  padding: 0;              /* 여백 제거 */
+  min-height: 100vh;       /* 화면 전체 높이 */
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;           /* 슬라이드가 화면 전체를 차지 */
+  overflow: hidden;
+}
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1.05);  /* 활성화된 슬라이드 확대 효과 */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* 이미지가 영역에 꽉 차도록 */
+}
