@@ -1,5 +1,11 @@
-[build]
-  command = "npm run build"
-
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+[build]
+  command = "npm run build"
+  publish = ".next" # 만약 안되면 out으로 변경
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
