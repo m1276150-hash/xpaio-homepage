@@ -1,12 +1,3 @@
-/* 색상 변수 */
-:root {
-  --color-background: #0D1B2A;
-  --color-text-primary: #FFFFFF;
-  --color-neon-blue: #4ECDC4;
-  --color-neon-purple: #9B5DE5;
-  --color-neon-yellow: #FFD93D;
-}
-
 /* 기본 설정 */
 * {
   margin: 0;
@@ -15,11 +6,10 @@
 }
 
 body {
-  background-color: var(--color-background);
-  color: var(--color-text-primary);
   font-family: 'Noto Sans KR', sans-serif;
   line-height: 1.6;
-  scroll-behavior: smooth;
+  background-color: #0D1B2A;
+  color: #fff;
 }
 
 /* 네비게이션 */
@@ -28,7 +18,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.7);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,7 +27,6 @@ body {
 }
 
 .logo {
-  color: #fff;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -55,29 +44,20 @@ body {
 }
 
 .nav-links li a:hover {
-  color: #ff6600;
+  color: #FFD93D;
 }
 
 /* 히어로 섹션 */
 .hero {
+  background-image: url('/hero-banner-01.webp');
   background-size: cover;
   background-position: center;
-  min-height: 900px;
+  min-height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
-  animation: changeBg 20s infinite;
-  padding-left: 20px; /* 왼쪽 여백 추가 */
-}
-
-@keyframes changeBg {
-  0%   { background-image: url('/hero-banner-01.webp'); }
-  25%  { background-image: url('/hero-banner-02.webp'); }
-  50%  { background-image: url('/hero-banner-03.webp'); }
-  75%  { background-image: url('/hero-banner-04.webp'); }
-  100% { background-image: url('/hero-banner-01.webp'); }
+  padding: 0 20px; /* 좌우 여백 */
 }
 
 .hero-content {
@@ -85,6 +65,7 @@ body {
   padding: 40px;
   border-radius: 10px;
   max-width: 800px;
+  margin: 0 auto;
 }
 
 .hero h1 {
@@ -98,8 +79,8 @@ body {
 }
 
 .cta-button {
-  background: #ff6600;
-  color: white;
+  background: #FFD93D;
+  color: #000;
   padding: 15px 30px;
   text-decoration: none;
   border-radius: 5px;
@@ -107,30 +88,21 @@ body {
 }
 
 .cta-button:hover {
-  background: #ff3300;
+  background: #FF6B6B;
+  color: #fff;
 }
 
-/* 소개 섹션 */
+/* About 섹션 */
 .about {
   padding: 80px 20px;
   background: #f9f9f9;
-  text-align: center;
+  color: #000;
 }
 
 .about-container {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.about h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.about p {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  color: #555;
+  padding: 0 20px; /* 좌우 여백 */
 }
 
 .about-grid {
@@ -148,27 +120,17 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* 서비스 섹션 */
+/* Services 섹션 */
 .services {
   padding: 80px 20px;
   background: #fff;
-  text-align: center;
+  color: #000;
 }
 
 .services-container {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.services h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.services p {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  color: #555;
+  padding: 0 20px;
 }
 
 .services-grid {
@@ -184,32 +146,17 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.service-item h3 {
-  margin-bottom: 15px;
-  color: #ff6600;
-}
-
-/* 문의 섹션 */
+/* Contact 섹션 */
 .contact {
   padding: 80px 20px;
   background: #f9f9f9;
-  text-align: center;
+  color: #000;
 }
 
 .contact-container {
   max-width: 800px;
   margin: 0 auto;
-}
-
-.contact h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.contact p {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  color: #555;
+  padding: 0 20px;
 }
 
 .contact-form {
@@ -227,8 +174,8 @@ body {
 }
 
 .contact-form button {
-  background: #ff6600;
-  color: white;
+  background: #FFD93D;
+  color: #000;
   padding: 15px;
   border: none;
   border-radius: 8px;
@@ -237,16 +184,16 @@ body {
 }
 
 .contact-form button:hover {
-  background: #ff3300;
+  background: #FF6B6B;
+  color: #fff;
 }
 
 /* 반응형 */
 @media (max-width: 768px) {
   .hero {
-    min-height: 600px;
-    animation: none;
+    min-height: 500px;
     background-image: url('/hero-banner-01.webp');
-    padding-left: 10px; /* 모바일에서도 여백 유지 */
+    padding: 0 10px;
   }
 
   .hero h1 {
