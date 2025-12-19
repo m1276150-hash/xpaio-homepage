@@ -10,6 +10,7 @@ body {
   line-height: 1.6;
   background-color: #0D1B2A;
   color: #fff;
+  padding-top: 60px;
 }
 
 /* 네비게이션 */
@@ -49,7 +50,7 @@ body {
 
 /* 히어로 섹션 */
 .hero {
-  background-image: url('/hero-banner-01.webp');
+  background-image: url('/mobile-bg1.webp');
   background-size: cover;
   background-position: center;
   min-height: 700px;
@@ -57,15 +58,26 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 20px; /* 좌우 여백 */
+  position: relative;
+  padding: 0 20px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 0;
 }
 
 .hero-content {
-  background: rgba(0,0,0,0.4);
+  position: relative;
+  z-index: 1;
   padding: 40px;
   border-radius: 10px;
   max-width: 800px;
   margin: 0 auto;
+  color: #fff;
 }
 
 .hero h1 {
@@ -102,7 +114,7 @@ body {
 .about-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px; /* 좌우 여백 */
+  padding: 0 20px;
 }
 
 .about-grid {
@@ -192,7 +204,7 @@ body {
 @media (max-width: 768px) {
   .hero {
     min-height: 500px;
-    background-image: url('/hero-banner-01.webp');
+    background-image: url('/mobile-bg1.webp');
     padding: 0 10px;
   }
 
