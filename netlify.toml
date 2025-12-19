@@ -1,8 +1,8 @@
 [build]
-  # 은하수님이 찾으신 해결책: 현재 폴더(.)를 기준으로 설정합니다.
   base = "."
-  command = "npm run build"
-  publish = ".next"
+  publish = "."
+  command = ""
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+# Next.js 플러그인 제거됨
+# [[plugins]]
+# package = "@netlify/plugin-nextjs"
