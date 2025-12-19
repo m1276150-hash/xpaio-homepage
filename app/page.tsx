@@ -1,8 +1,8 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import Header from '@/components/Header';
-import HeroSlider from '@/components/HeroSlider';
+import Header from '../components/Header';
+import HeroSlider from '../components/HeroSlider';
 import { motion } from 'framer-motion';
 
 export default function Home() {
