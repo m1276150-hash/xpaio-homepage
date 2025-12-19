@@ -62,13 +62,14 @@ body {
 .hero {
   background-size: cover;
   background-position: center;
-  height: 900px;
+  min-height: 900px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
   animation: changeBg 20s infinite;
+  padding-left: 20px; /* 왼쪽 여백 추가 */
 }
 
 @keyframes changeBg {
@@ -83,6 +84,7 @@ body {
   background: rgba(0,0,0,0.4);
   padding: 40px;
   border-radius: 10px;
+  max-width: 800px;
 }
 
 .hero h1 {
@@ -241,9 +243,10 @@ body {
 /* 반응형 */
 @media (max-width: 768px) {
   .hero {
-    height: 600px;
+    min-height: 600px;
     animation: none;
     background-image: url('/hero-banner-01.webp');
+    padding-left: 10px; /* 모바일에서도 여백 유지 */
   }
 
   .hero h1 {

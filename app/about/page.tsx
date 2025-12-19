@@ -1,7 +1,7 @@
 'use client'; // 프리렌더링 중 이벤트 핸들러 오류 방지
 
 import React from 'react';
-// Header 컴포넌트 (대문자)
+// Header 컴포넌트
 import Header from '@/components/Header';
 // AboutInteractiveSection 컴포넌트
 import { AboutInteractiveSection } from '@/components/about/Aboutinteractivesection';
