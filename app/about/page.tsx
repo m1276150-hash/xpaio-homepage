@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Header from "../../Components/Header";
 import AboutInteractiveSection from "../../Components/about/AboutInteractiveSection";
-import AboutContent from "../../Components/about/Aboutcontent";
+import AboutContent from "./Aboutcontent";
 
 export default function AboutPage() {
   return (

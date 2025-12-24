@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Header from "../../Components/Header";
-import FAQ from "../../Components/faq/FAQ";
+import FAQ from "../../app/faq/FAQ";
 
 export default function FAQPage() {
   return (

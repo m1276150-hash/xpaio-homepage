@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import Navbar from "../Components/Navbar";
 import Header from "../Components/Header";
 import AboutInteractiveSection from "../Components/about/AboutInteractiveSection";
-import AboutContent from "../Components/about/Aboutcontent";
-import FAQ from "../APP/faq/FAQ";
+import AboutContent from "./about/Aboutcontent";
+import FAQ from "./faq/FAQ";
 
 export default function HomePage() {
   return (
@@ -16,7 +16,7 @@ export default function HomePage() {
 
       <main className="flex-1 px-6 md:px-20 pt-32 pb-20 max-w-7xl mx-auto w-full">
         
-        {/* 2. Hero Section: 은하수님의 비전 강조 */}
+        {/* 2. Hero Section */}
         <section className="text-center mb-16 md:mb-24">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -34,7 +34,7 @@ export default function HomePage() {
           >
             "은하수가 이끄는 새로운 비전"
           </motion.p>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}

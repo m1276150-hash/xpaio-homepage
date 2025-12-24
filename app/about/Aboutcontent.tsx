@@ -1,29 +1,21 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import { roadmapData } from "../../config";
 
-export default function Aboutcontent() {
+export default function AboutContent() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-      {roadmapData.map((item, index) => (
-        <motion.div
-          key={item.id}
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: index * 0.2 }}
-          className="bg-white/5 p-10 rounded-2xl border border-white/10 shadow-xl"
-        >
-          <h3 className="text-2xl font-black text-[#4ECDC4] mb-2">
-            {item.title}
-          </h3>
-          <p className="text-gray-300 mb-2">{item.desc}</p>
-          <p className="text-sm text-gray-400">
-            📅 {item.date} | 상태: {item.status}
-          </p>
-        </motion.div>
-      ))}
+    <div className="bg-white/5 p-10 rounded-2xl border border-white/10 shadow-xl space-y-6">
+      <h2 className="text-2xl font-bold text-[#4ECDC4]">XPAIO 로드맵</h2>
+      <p className="text-gray-300">
+        XPAIO는 창의적 열정을 담아 무한히 확장 가능한 플랫폼을 목표로 합니다.
+        단계별 로드맵을 통해 성장 방향을 제시합니다.
+      </p>
+      <ul className="list-disc list-inside text-gray-400 space-y-2">
+        <li>1단계: 메인 홈페이지 및 커뮤니티 구축</li>
+        <li>2단계: 토큰 생태계 확장 및 파트너십</li>
+        <li>3단계: 글로벌 서비스 및 플랫폼 강화</li>
+        <li>4단계: 창의적 프로젝트와 협업 생태계 확대</li>
+      </ul>
     </div>
   );
 }
