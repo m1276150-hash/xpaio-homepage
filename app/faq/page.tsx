@@ -1,35 +1,43 @@
 "use client";
 
 import React from "react";
-import Header from "../../Components/Header";
-// 필요한 다른 컴포넌트들을 여기에 포함하세요 (예: FAQList 등)
+import Link from "next/link";
+import { motion } from "framer-motion";
 
-export default function FAQPage() {
-  // 빌드 단계에서 "e is not defined" 에러를 방지하기 위해 
-  // 내부 로직이 있다면 반드시 catch(error) 구조를 사용합니다.
-  try {
-    return (
-      <div className="min-h-screen bg-[#0D1B2A] text-white flex flex-col font-sans">
-        {/* 1. Header 타입 에러 박멸: as any 마법 적용 */}
-        <Header
-          {...({
-            title: "FAQ",
-            subtitle: "자주 묻는 질문들을 확인하세요."
-          } as any)}
-        />
+export default function NotFound() {
+  // 빌드 오류를 일으키는 'e' 참조를 모두 제거하고 
+  // 순수하게 정적인 텍스트와 구조만 남겼습니다.
+  return (
+    <div className="min-h-screen bg-[#0D1B2A] text-white flex flex-col items-center justify-center p-6 text-center">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <h1 className="text-9xl font-black text-[#4ECDC4] mb-4">404</h1>
+        <h2 className="text-3xl font-bold mb-8">길을 잃으셨나요?</h2>
+        <p className="text-gray-400 mb-12 max-w-md mx-auto">
+          찾으시는 페이지가 존재하지 않거나 이동되었을 수 있습니다.
+          은하수의 길잡이를 따라 메인으로 돌아가세요.
+        </p>
 
-        {/* 2. 메인 콘텐츠 영역 */}
-        <main className="flex-1 px-6 md:px-20 pt-32 max-w-7xl mx-auto w-full">
-          <div className="space-y-8">
-            {/* 여기에 FAQ 내용이 들어갑니다. */}
-            <p className="text-gray-400">자주 묻는 질문 서비스가 준비 중입니다.</p>
-          </div>
-        </main>
-      </div>
-    );
-  } catch (error) {
-    // 빌드 로봇이 'e'를 찾지 못해 헤매지 않도록 'error'로 명확히 정의합니다.
-    console.error("FAQ 페이지 렌더링 에러:", error);
-    return <div>페이지를 불러오는 중 오류가 발생했습니다.</div>;
-  }
+        <Link href="/">
+          {/* onClick={handleClick}이나 e 관련 참조가 없는지 다시 확인하세요! */}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-block"
+            {...({} as any)} // className 시비 방지 마법
+          >
+            <button 
+              type="button" 
+              className="px-12 py-4 rounded-2xl bg-[#4ECDC4] text-black font-black text-xl hover:bg-[#FFD93D] transition-all shadow-xl cursor-pointer"
+            >
+              홈으로 돌아가기
+            </button>
+          </motion.div>
+        </Link>
+      </motion.div>
+    </div>
+  );
 }
