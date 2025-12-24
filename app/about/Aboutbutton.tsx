@@ -1,4 +1,4 @@
-"use client"; // [진단 해결] 브라우저 전용 로직임을 선언합니다.
+"use client";
 
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";

@@ -4,9 +4,8 @@ import { motion } from "framer-motion";
 
 export function DownloadButton() {
   const handleDownload = () => {
-    // 실제 파일이 public 폴더에 있어야 작동합니다.
     const link = document.createElement("a");
-    link.href = "/sample.pdf"; 
+    link.href = "/sample.pdf";
     link.download = "Xpaio_Roadmap.pdf";
     link.click();
   };
@@ -14,7 +13,8 @@ export function DownloadButton() {
   return (
     <motion.button
       onClick={handleDownload}
-      className="bg-[#45B7AF] text-white px-12 py-5 rounded-2xl font-black text-2xl hover:bg-slate-900 transition-all shadow-lg"
+      className="bg-[#4ECDC4] text-black px-12 py-5 rounded-2xl font-black text-2xl 
+                 hover:bg-[#FFD93D] transition-all shadow-xl backdrop-blur-sm"
       whileHover={{ scale: 1.05, rotate: 1 }}
       whileTap={{ scale: 0.95 }}
       initial={{ opacity: 0, y: 20 }}

@@ -1,87 +1,90 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>XPaiO | 은하수가 이끄는 새로운 비전</title>
-  <link rel="stylesheet" href="globals.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-  <nav class="navbar">
-    <div class="logo">XPaiO</div>
-    <ul class="nav-links">
-      <li><a href="#home">홈</a></li>
-      <li><a href="#about">소개</a></li>
-      <li><a href="#services">서비스</a></li>
-      <li><a href="#contact">문의</a></li>
-    </ul>
-  </nav>
-
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>은하수가 이끄는 새로운 비전, XPaiO</h1>
-      <p>당신의 아이디어를 혁신적인 현실로 만드는 공간</p>
-      <a href="#about" class="cta-button">프로젝트 시작하기</a>
-      <a href="/demo" class="demo-btn">데모 게임 실행</a>
-
-
-    </div>
-  </section>
-
-  <section id="about" class="about">
-    <div class="about-container">
-      <h2>Who We Are</h2>
-      <p>XPaiO는 창의적인 아이디어를 디지털 현실로 구현하는 혁신 팀입니다.</p>
-      <div class="about-grid">
-        <div class="about-item">
-          <h3>비전</h3>
-          <p>세상을 바꾸는 독창적인 프로젝트를 지향합니다.</p>
-        </div>
-        <div class="about-item">
-          <h3>가치</h3>
-          <p>신뢰와 협업을 통해 고객의 비전을 완성합니다.</p>
-        </div>
-        <div class="about-item">
-          <h3>기술</h3>
-          <p>최신 웹 기술과 디자인 솔루션을 제공합니다.</p>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XPAIO 공식 홈페이지</title>
+    <meta name="description" content="XPAIO 로드맵과 FAQ를 소개하는 공식 홈페이지" />
+    <meta name="keywords" content="XPAIO, 로드맵, FAQ, 블록체인, 토큰, 메인넷" />
+    <meta name="author" content="XPAIO Team" />
+    <link rel="icon" href="public/favicon.ico" />
+    <link rel="stylesheet" href="styles/globals.css" />
+  </head>
+  <body class="bg-[#0D1B2A] text-white font-sans">
+    <!-- 네비게이션 -->
+    <nav class="fixed top-0 left-0 w-full bg-[#0D1B2A] border-b border-white/10 p-4 z-50">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a href="/" class="text-neonBlue font-bold text-xl">XPAIO</a>
+        <ul class="flex space-x-6">
+          <li><a href="#about" class="hover:text-neonPurple">About</a></li>
+          <li><a href="#roadmap" class="hover:text-neonPurple">Roadmap</a></li>
+          <li><a href="#faq" class="hover:text-neonPurple">FAQ</a></li>
+          <li><a href="#contact" class="hover:text-neonPurple">Contact</a></li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <section id="services" class="services">
-    <div class="services-container">
-      <h2>Our Services</h2>
-      <div class="services-grid">
-        <div class="service-item">
-          <h3>웹 개발</h3>
-          <p>Next.js 기반의 고성능 웹사이트 제작</p>
-        </div>
-        <div class="service-item">
-          <h3>UI/UX 디자인</h3>
-          <p>사용자 중심의 감각적인 인터페이스 설계</p>
-        </div>
-        <div class="service-item">
-          <h3>브랜딩</h3>
-          <p>XPaiO만의 정체성을 담은 브랜드 컨설팅</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- 메인 -->
+    <main class="pt-24 px-6 md:px-20 max-w-7xl mx-auto">
+      <!-- Hero Section -->
+      <section class="text-center mb-16">
+        <h1 class="text-5xl md:text-8xl font-black mb-8 tracking-tighter">
+          XPAIO 로드맵
+        </h1>
+        <p class="text-xl md:text-3xl text-neonBlue font-bold italic">
+          "은하수가 이끄는 새로운 비전"
+        </p>
+      </section>
 
-  <section id="contact" class="contact">
-    <div class="contact-container">
-      <h2>Contact Us</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="성함" required />
-        <input type="email" placeholder="이메일 주소" required />
-        <textarea rows="5" placeholder="프로젝트에 대해 알려주세요" required></textarea>
-        <button type="submit">문의 보내기</button>
-      </form>
-    </div>
-  </section>
+      <!-- About Section -->
+      <section id="about" class="mb-16">
+        <h2 class="text-3xl font-bold text-neonYellow mb-4">About</h2>
+        <p class="text-gray-300">
+          XPAIO는 설계자의 창의적 열정을 담아 무한히 확장 가능한 공간을 제공하는 플랫폼입니다.
+        </p>
+      </section>
 
-</body>
+      <!-- Roadmap Section -->
+      <section id="roadmap" class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
+        <div class="bg-white/5 p-10 rounded-2xl border border-white/10 shadow-xl">
+          <h3 class="text-2xl font-black text-neonBlue mb-2">Phase 01</h3>
+          <p class="text-gray-300">Xpaio 생태계의 기초 구축 및 커뮤니티 조성</p>
+        </div>
+        <div class="bg-white/5 p-10 rounded-2xl border border-white/10 shadow-xl">
+          <h3 class="text-2xl font-black text-neonBlue mb-2">Phase 02</h3>
+          <p class="text-gray-300">파이 네트워크 기반의 혁신적인 게임 런칭</p>
+        </div>
+        <div class="bg-white/5 p-10 rounded-2xl border border-white/10 shadow-xl">
+          <h3 class="text-2xl font-black text-neonBlue mb-2">Phase 03</h3>
+          <p class="text-gray-300">글로벌 유저 확장을 위한 공격적인 마케팅</p>
+        </div>
+        <div class="bg-white/5 p-10 rounded-2xl border border-white/10 shadow-xl">
+          <h3 class="text-2xl font-black text-neonBlue mb-2">Phase 04</h3>
+          <p class="text-gray-300">Xpaio만의 독자적인 거버넌스 및 경제 시스템 완성</p>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="space-y-8 mb-16">
+        <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+          <h2 class="text-2xl font-bold text-neonYellow mb-2">Q. XPAIO는 어떤 플랫폼인가요?</h2>
+          <p class="text-gray-300">A. 설계자의 창의적 열정을 담아 무한히 확장 가능한 공간을 제공합니다.</p>
+        </div>
+        <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+          <h2 class="text-2xl font-bold text-neonYellow mb-2">Q. 어떻게 참여할 수 있나요?</h2>
+          <p class="text-gray-300">A. 회원가입 후 프로젝트에 기여하거나 이벤트에 참여할 수 있습니다.</p>
+        </div>
+        <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+          <h2 class="text-2xl font-bold text-neonYellow mb-2">Q. 향후 계획은 무엇인가요?</h2>
+          <p class="text-gray-300">A. 지속적인 업데이트와 사용자와의 협업을 통해 새로운 기능을 추가할 예정입니다.</p>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="mb-16">
+        <h2 class="text-3xl font-bold text-neonYellow mb-4">Contact</h2>
+        <p class="text-gray-300">문의: contact@xpaio.com</p>
+      </section>
+    </main>
+  </body>
 </html>
