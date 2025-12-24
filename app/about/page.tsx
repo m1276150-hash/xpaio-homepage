@@ -9,7 +9,7 @@ import AboutContent from "./Aboutcontent";
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-[#0D1B2A] text-white flex flex-col font-sans">
-      {/* 1. 상단 헤더: TypeScript 속성 에러 방지를 위한 우회 설정 */}
+      {/* 1. 상단 헤더: as any를 사용하여 속성 시비를 원천 차단합니다. */}
       <Header
         {...({
           title: "About XPAIO",
@@ -18,7 +18,7 @@ export default function AboutPage() {
       />
 
       <main className="flex-1 px-6 md:px-20 pt-32 max-w-7xl mx-auto w-full">
-        {/* 2. Hero Section: className 문제아들 완벽 박멸 */}
+        {/* 2. Hero Section */}
         <section className="text-center mb-16 md:mb-24">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -41,7 +41,7 @@ export default function AboutPage() {
           </motion.div>
         </section>
 
-        {/* 3. 인터랙티브 섹션: 애니메이션 래퍼 적용 */}
+        {/* 3. 인터랙티브 섹션: 이 내부 파일들에서 onClick={handleClick} 등을 확인해야 합니다. */}
         <section className="text-center pb-32">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
