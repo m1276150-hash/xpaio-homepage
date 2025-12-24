@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { roadmapData } from "../../config";
 
-export default function AboutContent() {
+export default function Aboutcontent() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
       {roadmapData.map((item, index) => (
