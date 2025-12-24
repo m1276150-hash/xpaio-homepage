@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { handleClientScriptLoad } from "next/script";
 
 export default function NotFound() {
   return (
@@ -13,7 +14,7 @@ export default function NotFound() {
         <Link href="/">
           {/* onClick={handleClick} 같은 유령 참조가 절대 없어야 합니다 */}
           <button 
-            type="button" 
+            type="button" onClick={(event)=> handleClientScriptLoad(event)}
             className="px-12 py-4 rounded-2xl bg-[#4ECDC4] text-black font-black text-xl hover:bg-[#FFD93D] transition-all"
           >
             홈으로 돌아가기
