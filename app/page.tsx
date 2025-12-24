@@ -7,12 +7,13 @@ import Header from "../Components/Header";
 import AboutInteractiveSection from "../Components/about/AboutInteractiveSection";
 import AboutContent from "./about/Aboutcontent";
 import FAQ from "./faq/FAQ";
+import { title } from "node:process";
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#0D1B2A] text-white font-sans flex flex-col">
       {/* 1. 상단 네비게이션 */}
-      <Navbar />
+      <Navbar {...({title: "XPAIO" } as any)}/>
 
       <main className="flex-1 px-6 md:px-20 pt-32 pb-20 max-w-7xl mx-auto w-full">
         
