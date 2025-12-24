@@ -1,32 +1,47 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* 전역 폰트 및 기본 스타일 */
-html, body {
-  @apply bg-[#0D1B2A] text-white font-sans;
-  margin: 0;
-  padding: 0;
-  height: 100%;
+/* 1. 전역 스타일 정의 */
+@layer base {
+  html, body {
+    background-color: #0D1B2A;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  /* 링크 스타일 */
+  a {
+    color: #4ECDC4; /* neonBlue 대용 */
+    transition-property: color;
+    transition-duration: 300ms;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #5f27cd; /* neonPurple 대용 */
+  }
+
+  /* 제목 스타일 */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+
+  /* 버튼 기본 스타일 */
+  button {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition-duration: 300ms;
+  }
 }
 
-/* 링크 스타일 */
-a {
-  @apply text-neonBlue hover:text-neonPurple transition-colors duration-300;
-  text-decoration: none;
-}
-
-/* 제목 스타일 */
-h1, h2, h3, h4, h5, h6 {
-  @apply font-bold tracking-tight;
-}
-
-/* 버튼 기본 스타일 */
-button {
-  @apply px-4 py-2 rounded-lg font-semibold transition duration-300;
-}
-
-/* 스크롤바 커스터마이즈 (다크 테마에 맞춤) */
+/* 2. 스크롤바 커스터마이즈 (CSS 표준 방식) */
 ::-webkit-scrollbar {
   width: 8px;
 }
